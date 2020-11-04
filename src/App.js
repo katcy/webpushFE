@@ -1,23 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import * as serviceWorker from "./SWRegisterer";
 
 function App() {
+  const [email, setemail] = useState("kat@kat");
   return (
     <div className="App">
       <header className="App-header">
+        <h1>Subscribe to Push Notification</h1>
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        <br />
+        <input
+          placeholder="email"
+          className="mb-3"
+          onChange={(evt) => {
+            setemail(evt.target.value);
+          }}
+        />
+        <button
+          className="btn btn-primary"
+          onClick={() => {
+            serviceWorker.register(email);
+          }}
         >
-          Learn React
-        </a>
+          Subscribe to Push Notification
+        </button>
+        <br />
+        <button
+          className="btn btn-primary"
+          onClick={() => {
+            console.log("Scoring");
+            fetch("https://stark-beyond-35806.herokuapp.com/score", {
+              method: "GET",
+              headers: {
+                "content-type": "application/json",
+              },
+            });
+          }}
+        >
+          Score
+        </button>
       </header>
     </div>
   );
