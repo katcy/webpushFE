@@ -33,13 +33,12 @@ function App() {
           Subscribe to Push Notification
         </button>
         <br />
-        <button
+        {/* <button
           className="btn btn-primary d-none"
           onClick={() => {
             console.log("Scoring");
             fetch("https://stark-beyond-35806.herokuapp.com/score", {
               method: "GET",
-              mode: "no-cors",
               headers: {
                 "content-type": "application/json",
               },
@@ -47,7 +46,7 @@ function App() {
           }}
         >
           Score
-        </button>
+        </button> */}
       </header>
     </div>
   );
