@@ -34,7 +34,7 @@ function App() {
         </button>
         <br />
         <button
-          className="btn btn-primary"
+          className="btn btn-primary d-none"
           onClick={() => {
             console.log("Scoring");
             fetch("https://stark-beyond-35806.herokuapp.com/score", {
