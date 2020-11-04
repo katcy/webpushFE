@@ -11,7 +11,7 @@ ReactDOM.render(
     <Router>
       <Switch>
         <Route path="/" exact component={App} />
-        <Route admin="/admin" component={Admin} />
+        <Route admin="/push" component={Admin} />
       </Switch>
     </Router>
   </React.StrictMode>,

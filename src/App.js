@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "./logo.svg";
 import "./App.css";
 import * as serviceWorker from "./SWRegisterer";
@@ -7,6 +8,11 @@ function App() {
   const [email, setemail] = useState("kat@kat");
   return (
     <div className="App">
+      <div className="alert alert-warning m-0">
+        <Link className="btn btn-secondary" to="/push">
+          Send push notification
+        </Link>
+      </div>
       <header className="App-header">
         <h1>Subscribe to Push Notification</h1>
         <img src={logo} className="App-logo" alt="logo" />
