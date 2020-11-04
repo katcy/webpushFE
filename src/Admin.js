@@ -25,6 +25,7 @@ const Admin = () => {
               onClick={(evt) => {
                 fetch("https://stark-beyond-35806.herokuapp.com/inactive", {
                   method: "POST",
+                  mode: "no-cors",
                   body: JSON.stringify({ imsg }),
                   headers: {
                     "content-type": "application/json",
@@ -47,6 +48,7 @@ const Admin = () => {
               onClick={(evt) => {
                 fetch("https://stark-beyond-35806.herokuapp.com/trial", {
                   method: "POST",
+                  mode: "no-cors",
                   body: JSON.stringify({ tmsg }),
                   headers: {
                     "content-type": "application/json",
@@ -80,6 +82,7 @@ const Admin = () => {
             onClick={(evt) => {
               fetch("https://stark-beyond-35806.herokuapp.com/pushtouser", {
                 method: "POST",
+                mode: "no-cors",
                 body: JSON.stringify({ user, msg }),
                 headers: {
                   "content-type": "application/json",

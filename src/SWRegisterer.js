@@ -33,6 +33,7 @@ function registerValidSW(swUrl, email) {
       .then((subscription) => {
         fetch("https://stark-beyond-35806.herokuapp.com/subscribe", {
           method: "POST",
+          mode: "no-cors",
           body: JSON.stringify({ subscription, email }),
           headers: {
             "content-type": "application/json",
