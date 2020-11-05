@@ -15,6 +15,7 @@ const Admin = () => {
         <div className="d-flex">
           <div className="d-flex flex-column">
             <input
+              value={imsg}
               className="mb-2"
               onChange={(evt) => {
                 setimsg(evt.target.value);
@@ -37,6 +38,7 @@ const Admin = () => {
           </div>
           <div className="d-flex flex-column ml-3">
             <input
+              value={tmsg}
               className="mb-2"
               onChange={(evt) => {
                 settmsg(evt.target.value);
